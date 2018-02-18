@@ -15,88 +15,7 @@
 	min-height:1px;
 	 
 }
-/*Modal*/
-.modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	display: none;
-
-}
-.modal-content {
-	position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #CECDB4;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem
-}
-.close {
-  width:30px;
-	height:30px;
-	padding-top:4px;
-	display:inline-block;
-	position:absolute;
-	top:0px;
-	right:0px;
-	transition:ease 0.25s all;
-	-webkit-transform:translate(50%, -50%);
-	transform:translate(50%, -50%);
-	border-radius: 15px;
-	background:rgba(0, 0, 0, 0.8);
-	font-size:20px;
-	text-align:center;
-	line-height:100%;
-	color:#fff;
-	text-decoration: none;
-}
-.close:hover {
-	-webkit-transform:translate(50%, -50%) rotate(180deg);
-	transform:translate(50%, -50%) rotate(180deg);
-	background: rgba(0, 0, 0, 1);
-
-}
-/*Animation*/   
-@keyframes btnAnimation {
-	0% {
-		background-position: 100%;
-	}
-	100% {
-		background-position:  0%;
-		color: #FFF;
-	}
-}
-@media (max-width: 375px) {
-	/*Grid*/
-.col-s-1 {width: 8.33%;}
-.col-s-2 {width: 16.66%;}
-.col-s-3 {width: 25%;}
-.col-s-4 {width: 33.33%;}
-.col-s-5 {width: 41.66%;}
-.col-s-6 {width: 50%;}
-.col-s-7 {width: 58.33%;}
-.col-s-8 {width: 66.66%;}
-.col-s-9 {width: 75%;}
-.col-s-10 {width: 83.33%;}
-.col-s-11 {width: 91.66%;}
-.col-s-12 {width: 100%;}
-.col-s-offset-0 {margin-left: 0;}
-.col-s-offset-1 {margin-left: 8.33%;}
-.col-s-offset-2 {margin-left: 16.66%;}
-.col-s-offset-3 {margin-left: 25%;}
-.col-s-offset-4 {margin-left: 33.33%;}
-.col-s-offset-5 {margin-left: 41.66%;}
-.col-s-offset-6 {margin-left: 50%;}
-.col-s-offset-7 {margin-left: 58.33%;}
-.col-s-offset-8 {margin-left: 66.66%;}
-.col-s-offset-9 {margin-left: 75%;}
-.col-s-offset-10 {margin-left: 83.33%;}
-.col-s-offset-11 {margin-left: 91.66%;}
+	/*header*/
 	a.toggle-nav {
 		top: 12px;
     right: 15px;
@@ -114,7 +33,7 @@
 		text-align: center;
   	transition:all 0.4s ease-in-out 0s;
 		padding: 15px;
-		margin-left: -500px;
+		margin-left: -700px;
 		height:37vh;
 	}
 	.topNav.open {
@@ -140,6 +59,7 @@
 	header {
 		background-image: url(img/grid-ball-1914560.jpg);
 		height: 100vh;
+		background-attachment: fixed;
 		
 	}
 	.logo {
@@ -152,15 +72,11 @@
 	}
 	.geodezja {
 		position: relative;
+		margin-top: 30px;
+		padding-bottom: 20px;
 		
 	}
-	.info img {
-		max-width: 100%;
-		height: 200px;
-		position: absolute;
-		top: 20px;
-		right: 5px;	
-	}
+	
 	.geodezja h2 {
 		color: #fff;
 		font-family: 'Shadows Into Light', cursive;
@@ -188,7 +104,8 @@
 	float: right;
 	margin: 30px 50px 0 0;
 }
-	.brand .description {
+/* brand*/
+.brand .description {
 		text-align: center;
 		padding: 30px 5px 0 5px;
 		line-height: 26px;
@@ -198,7 +115,7 @@
 	}
 	
 	.brand img {
-		max-width: 100%;
+		width: 100%;
 		height: 200px;
 	}
 	.brand ul {
@@ -207,11 +124,14 @@
 		padding: 10px 0 0 0;
 		
 	}
-	.projects .imgContainer img {
-		max-width: 100%;
+/*projects*/
+.projects .imgContainer img {
+		width: 100%;
 		height: 250px;
 		opacity: 0.7;
 		display: block;
+		transition: all 0.5s linear;
+		transform: scale3d(1,1,1);
 	}
 	.projects .box {
 		position: relative;
@@ -229,7 +149,8 @@
 		border: 1px solid black;
 		height: 1px;
 	}
-	.numbers {
+/*numbers*/
+.numbers {
 		text-align: center;
 		background: #EB5757;  /* fallback for old browsers */
 background: -webkit-linear-gradient(left, #000000, #EB5757);
@@ -237,16 +158,17 @@ background: -o-linear-gradient(left, #000000, #EB5757);
 background: linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		color: #fff;
 	}
-	.numbers .boxNumbers {
+.numbers .boxNumbers {
 		margin: 30px auto;
 		
 		font-size: 30px;
 		font-weight: bold;
 	}
-	.numbers h4 {
+.numbers h4 {
 		padding-bottom: 30px;
 	}
-	.team {
+/*team*/
+.team {
 		text-align: center;
 		padding-top: 40px;
 		height: 400px;
@@ -291,32 +213,51 @@ background: linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safar
 		font-weight: 700;
 		padding: 10px;
 	}
-	.modal-content {
+
+/*Modal*/
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+
+}
+.modal-content {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #CECDB4;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem
+}
+.modal-content {
 		width: 95%;
 		height: 100vh;
 		text-align: center;
 		
 	}
-	.close {
-		top:14px;
-		right:12px;
-	}
-	.modal-content h3 {
+	
+.modal-content h3 {
 		padding-bottom: 10px;
 	}
-	.modal-content ul {
+.modal-content ul {
 		list-style-type: none;
 		padding: 15px 0 0 0;
 		margin-bottom: 30px;
 		line-height: 26px;
 	}
-	.modal-content .row {
+.modal-content .row {
 		line-height: 22px;
 	}
-	.modal-content .media {
+.modal-content .media {
 		padding-top: 10px;
 	}
-	.modal-content .media .media-link {
+.modal-content .media .media-link {
 		
 		display: inline-block;
 		width: 60px;
@@ -328,18 +269,246 @@ background: linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safar
 		color: #fff;
 		
 	}
-	.media .facebook {
+.media .facebook {
 		background: #3b5998;
 	}
-	.media .gmail {
+.media .gmail {
 		background: #bf0000;
 	}
-	.media .phone {
+.media .phone {
 		background: #008000;
 	}
-	
-	
+
+.close {
+  width:30px;
+	height:30px;
+	padding-top:4px;
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	transition:ease 0.25s all;
+	-webkit-transform:translate(50%, -50%);
+	transform:translate(50%, -50%);
+	border-radius: 15px;
+	background:rgba(0, 0, 0, 0.8);
+	font-size:20px;
+	text-align:center;
+	line-height:100%;
+	color:#fff;
+	text-decoration: none;
 }
+.close:hover {
+	-webkit-transform:translate(50%, -50%) rotate(180deg);
+	transform:translate(50%, -50%) rotate(180deg);
+	background: rgba(0, 0, 0, 1);
+
+}
+/*Animation*/   
+@keyframes btnAnimation {
+	0% {
+		background-position: 100%;
+	}
+	100% {
+		background-position:  0%;
+		color: #FFF;
+	}
+}
+@media (max-width: 575px) {
+	/*Grid*/
+.col-s-1 {width: 8.33%;}
+.col-s-2 {width: 16.66%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33%;}
+.col-s-5 {width: 41.66%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33%;}
+.col-s-8 {width: 66.66%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33%;}
+.col-s-11 {width: 91.66%;}
+.col-s-12 {width: 100%;}
+.col-s-offset-0 {margin-left: 0;}
+.col-s-offset-1 {margin-left: 8.33%;}
+.col-s-offset-2 {margin-left: 16.66%;}
+.col-s-offset-3 {margin-left: 25%;}
+.col-s-offset-4 {margin-left: 33.33%;}
+.col-s-offset-5 {margin-left: 41.66%;}
+.col-s-offset-6 {margin-left: 50%;}
+.col-s-offset-7 {margin-left: 58.33%;}
+.col-s-offset-8 {margin-left: 66.66%;}
+.col-s-offset-9 {margin-left: 75%;}
+.col-s-offset-10 {margin-left: 83.33%;}
+.col-s-offset-11 {margin-left: 91.66%;}
+	
+	.info img {
+		max-width: 100%;
+		position: absolute;
+		top: 20px;
+		right: 5px;
+		height: 170px;
+	}
+	.close {
+		top:14px;
+		right:12px;
+	}
+}
+@media (min-width: 576px) and (max-width: 767px) {
+	.col-sm-1 {width: 8.33%;}
+	.col-sm-2 {width: 16.66%;}
+	.col-sm-3 {width: 25%;}
+	.col-sm-4 {width: 33.33%;}
+	.col-sm-5 {width: 41.66%;}
+	.col-sm-6 {width: 50%;}
+	.col-sm-7 {width: 58.33%;}
+	.col-sm-8 {width: 66.66%;}
+	.col-sm-9 {width: 75%;}
+	.col-sm-10 {width: 83.33%;}
+	.col-sm-11 {width: 91.66%;}
+	.col-sm-12 {width: 100%;}
+	.col-sm-offset-0 {margin-left: 0;}
+	.col-sm-offset-1 {margin-left: 8.33%;}
+	.col-sm-offset-2 {margin-left: 16.66%;}
+	.col-sm-offset-3 {margin-left: 25%;}
+	.col-sm-offset-4 {margin-left: 33.33%;}
+	.col-sm-offset-5 {margin-left: 41.66%;}
+	.col-sm-offset-6 {margin-left: 50%;}
+	.col-sm-offset-7 {margin-left: 58.33%;}
+	.col-sm-offset-8 {margin-left: 66.66%;}
+	.col-sm-offset-9 {margin-left: 75%;}
+	.col-sm-offset-10 {margin-left: 83.33%;}
+	.col-sm-offset-11 {margin-left: 91.66%;}
+	
+	.geodezja {
+		text-align: center;
+	}
+	.geodezja h2 {
+		padding: 54px 0 20px 0 ;
+	}
+	.btn-geo {
+		float: none;
+		margin: 0 auto;	
+	}
+	.info img {
+		display: none;
+	
+	}
+	.topNav {
+		margin-left: -900px;
+	}
+	
+	.projects .imgContainer img {
+		height: 300px;	
+	}
+	 .description {
+		margin-bottom: 30px;
+	}
+	.projects .box .layerBox {
+		position: absolute;
+		right: 25px;
+		left: 25px;
+		font-size: 14px;	
+	}
+	.team2 {
+		color: #fff;
+	}
+	
+	.close {
+		top:14px;
+		right:12px;
+	}
+}
+@media (min-width: 768px)  {
+	.col-md-1 {width: 8.33%;}
+	.col-md-2 {width: 16.66%;}
+	.col-md-3 {width: 25%;}
+	.col-md-4 {width: 33.33%;}
+	.col-md-5 {width: 41.66%;}
+	.col-md-6 {width: 50%;}
+	.col-md-7 {width: 58.33%;}
+	.col-md-8 {width: 66.66%;}
+	.col-md-9 {width: 75%;}
+	.col-md-10 {width: 83.33%;}
+	.col-md-11 {width: 91.66%;}
+	.col-md-12 {width: 100%;}
+	.col-md-offset-0 {margin-left: 0;}
+	.col-md-offset-1 {margin-left: 8.33%;}
+	.col-md-offset-2 {margin-left: 16.66%;}
+	.col-md-offset-3 {margin-left: 25%;}
+	.col-md-offset-4 {margin-left: 33.33%;}
+	.col-md-offset-5 {margin-left: 41.66%;}
+	.col-md-offset-6 {margin-left: 50%;}
+	.col-md-offset-7 {margin-left: 58.33%;}
+	.col-md-offset-8 {margin-left: 66.66%;}
+	.col-md-offset-9 {margin-left: 75%;}
+	.col-md-offset-10 {margin-left: 83.33%;}
+	.col-md-offset-11 {margin-left: 91.66%;}
+	
+	.topNav {
+		margin-left: -2200px;
+	}
+	.info img {
+		position: absolute;
+		top: -107px;
+    left: 58px;
+		height: 300px;
+		transform: rotateY(180deg);
+	}
+	.geodezja {
+		text-align: center;
+	}
+	.geodezja h2 {
+		padding: 54px 0 20px 0 ;
+	}
+	.btn-geo {
+		float: none;
+		margin: 0 auto;	
+	}
+	.brand img {
+		height: 430px;
+	}
+	.brand .description {
+		padding: 30px;
+	}
+	.description ul {
+		list-style-type: none;
+	}
+	
+	.imgContainer:hover img {
+		transform: scale3d(1.1, 1.2, 1);
+}
+	.imgContainer {
+		overflow: hidden;
+}
+	.projects .box .layerBox {
+		opacity: 0;	
+}
+	.projects .box:hover .layerBox {
+		opacity: 1;
+		transition: all 0.5s linear;
+}
+	.numbers {
+		height: 300px;
+		
+	}
+	.boxNumbers {
+		padding-top: 100px;
+	}
+	.team2 {
+		color: #fff;
+		padding-top: 80px;
+	}
+	.modal-content {
+		width: auto;
+		height: auto;
+	
+		
+	}
+}
+
+	
+
+
 
 
 
